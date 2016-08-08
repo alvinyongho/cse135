@@ -1,4 +1,5 @@
 RewriteEngine on 
-
-RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule !.*\.php$ %{REQUEST_FILENAME}.php [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-f       # if the requested URL is not a file that exists
+RewriteCond %{REQUEST_FILENAME} !-d       # and it isn't a directory that exists either
+RewriteCond %{REQUEST_FILENAME}\.php  -f  # but when you put ".php" on the end it is a file that exists
+RewriteRule ^(.+)$ $1\.php [QSA]          # then serve that file (maintaining the query string)
