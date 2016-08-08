@@ -3,9 +3,6 @@ RewriteEngine on
 RewriteRule ^teemo$ team.html [NC]
 
 
-RewriteRule ^phpinfo$ phpinfo.php [NC]
-RewriteRule ^info$ phpinfo.php [NC]
-
-
-
-
+RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^([^\.]+)$ $1.html [NC,L]
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
