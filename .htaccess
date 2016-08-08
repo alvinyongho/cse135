@@ -5,5 +5,5 @@ RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html
 
 RewriteEngine on 
-RewriteRule phpinfo phpinfo.php
-RewriteRule deploy deploy.php
+RewriteRule ^phpinfo/?$ phpinfo.php
+RewriteRule ^deploy/?$ deploy.php
