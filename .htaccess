@@ -2,8 +2,8 @@ RewriteEngine On
 RewriteBase /
 
 # To externally redirect /file.php to /file
-RewriteCond %{THE_REQUEST} \s/+(?:index)?(.*?)\.php[\s?] [NC]
-RewriteRule ^ %1 [R=301,L,NE]
+# RewriteCond %{THE_REQUEST} \s/+(?:index)?(.*?)\.php[\s?] [NC]
+# RewriteRule ^ %1 [R=301,L,NE]
 
 # To internally forward /file to /file.php
 RewriteCond %{REQUEST_FILENAME} !-d
