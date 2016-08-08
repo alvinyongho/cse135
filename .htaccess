@@ -1,7 +1,7 @@
 RewriteEngine on
 
 RewriteRule ^(.*)$ phpinfo.php  
-RewriteRule ^deployed$ deploy.php  
+RewriteRule ^(.*)$ deploy.php  
 
 
 
