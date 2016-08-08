@@ -1,4 +1,2 @@
 RewriteEngine on
-RewriteRule ^403.html$ 403
-RewriteRule ^404.html$ 404
-
+RewriteRule ^403.html$ 405.html
