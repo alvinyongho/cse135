@@ -1,6 +1,10 @@
 RewriteEngine on
 
-RewriteRule ^(.*)$ phpinfo.php  
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ phpinfo.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ deploy.php  
 
 
