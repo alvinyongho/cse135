@@ -1,4 +1,5 @@
 RewriteEngine on
-RewriteRule ^403$ 403.html
 
-RewriteRule ^404$ 403.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
