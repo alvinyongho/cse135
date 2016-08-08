@@ -1,0 +1,145 @@
+
+#bg-gradient {
+	position: relative;
+	background-image: 
+		url("../img/noise-bg.png"),
+		radial-gradient(12% -20%, #FFFFFF 6%, #F2F4F5 27%, #C4CCD3 100%);
+
+}
+
+#logo {
+	width: 45px;
+	height: 45px;
+}
+
+#bolded_line{
+	margin-left:auto; margin-right:auto; display:block;
+}
+
+#header{
+	position: fixed;
+	width:100%;
+	/*margin: 10px;*/
+	/*font-family: 'Roboto', sans-serif;*/
+	text-align: center;
+	/* Rectangle: */
+    background-color: rgba(46, 71, 115, .04);
+    padding:15px;
+	margin:0px;
+	max-width: 100%;
+}
+
+
+#logo-area{
+	display:inline;
+	/*padding: 5px;*/
+	padding: 10px;
+
+}
+
+#logo-name{
+	font-size: 24px;
+	font-weight: bold;
+	letter-spacing: 4px;
+	display:inline;
+	vertical-align:middle;
+
+
+}
+
+#categories{
+	padding-top: 15px;
+}
+
+.category{
+	font-size: 14px;
+	padding: 20px;
+	display:inline;
+	/*word-spacing: 20px;*/
+	letter-spacing: 2.2px;
+
+
+}
+
+#buy-now {
+	padding: 5px;
+	margin-left:20px;
+	font-size: 14px;
+	border: solid 1px black;
+	display: inline;
+	word-spacing: 5px;
+	letter-spacing: 2.2px;
+	border-radius: 5px;
+
+}
+
+
+body{
+	font-family: 'Roboto', sans-serif;
+}
+
+#the-team{
+	padding: 55px;
+	padding-top: 150px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 48px;
+	padding-bottom: 10px;
+}
+
+@media screen and (min-width: 40em){
+	#the-team{
+	padding: 55px;
+	padding-top: 120px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 48px;
+	padding-bottom: 10px;
+	}
+
+}
+
+
+#team-member{
+	padding: 30px;
+	text-align: center;
+	padding-top:55px;
+
+}
+
+
+.circleBase {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+}
+
+.type1 {
+    width: 200px;
+    height: 200px;
+    background: white;
+    border: 1px solid #E7E7E7;
+    /*width: 50%;*/
+    margin: 0 auto; 
+}
+
+
+.member-name{
+	padding: 15px;
+	font-weight: bold;
+}
+
+.member-info{
+	padding-bottom: 35px;
+}
+
+#footer {
+    position: fixed;
+    text-align:center;
+	width: 100%;
+	color: white;
+	font-size: 12px;
+	padding: 10px;
+	bottom: 0;
+    background-color: rgba(46, 71, 115, .04);
+
+}
