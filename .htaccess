@@ -1,9 +1,4 @@
-RewriteEngine On
-RewriteBase /
-
-
-
-# To internally forward /file to /file.php
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{DOCUMENT_ROOT}/$1\.php -f [NC]
-RewriteRule ^(.+?)/?$ $1.php [L]
+RewriteEngine on 
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteCond %{REQUEST_FILENAME}\.php -f 
+RewriteRule ^(.*)$ $1.php
