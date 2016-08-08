@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteRule ^403$ 403.html
+
+RewriteRule ^404$ 403.html
