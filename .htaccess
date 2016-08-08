@@ -1,2 +1,0 @@
-RewriteEngine on
-RewriteRule ^403.html$ 405.html
