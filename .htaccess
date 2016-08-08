@@ -1,2 +1,4 @@
 RewriteEngine On
-RewriteRule ^([^.?]+)$ %{REQUEST_URI}.php [L]
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteCond %{REQUEST_FILENAME}.php -f 
+RewriteRule ^([a-zA-Z0-9]+)(/)?$ $1.php
