@@ -1,5 +1,21 @@
-RewriteEngine on 
-RewriteCond %{REQUEST_FILENAME} !-f       # if the requested URL is not a file that exists
-RewriteCond %{REQUEST_FILENAME} !-d       # and it isn't a directory that exists either
-RewriteCond %{REQUEST_FILENAME}\.php  -f  # but when you put ".php" on the end it is a file that exists
-RewriteRule ^(.+)$ $1\.php [QSA]          # then serve that file (maintaining the query string)
+Options +FollowSymLinks
+RewriteEngine On
+
+# Remove trailing slashes.
+# e.g. example.com/foo/ will redirect to example.com/foo
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [R=permanent,QSA]
+
+# Redirect to HTML if it exists.
+# e.g. example.com/foo will display the contents of example.com/foo.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [L,QSA]
+
+# Redirect to PHP if it exists.
+# e.g. example.com/foo will display the contents of example.com/foo.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.+)$ $1.php [L,QSA]
