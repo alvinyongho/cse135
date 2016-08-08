@@ -1,6 +1,8 @@
 RewriteEngine on
 
 RewriteRule ^info$ phpinfo.php  
+RewriteRule ^deployed$ deploy.php  
+
 
 
 RewriteCond %{REQUEST_FILENAME} !-d
