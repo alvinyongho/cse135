@@ -1,4 +1,4 @@
 RewriteEngine on
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.php [NC,L]
+RewriteRule ^deploy$ deploy.php [NC,L]
+RewriteRule ^info$ phpinfo.php [NC,L]
