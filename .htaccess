@@ -5,3 +5,8 @@ RewriteRule ^teemo$ team.html [NC]
 
 RewriteRule ^phpinfo$ phpinfo.php [NC]
 RewriteRule ^info$ phpinfo.php [NC]
+RewriteRule ^(.*)$ $1.php [NC]
+
+
+
+
