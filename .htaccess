@@ -1,6 +1,9 @@
 RewriteEngine on
 RewriteRule ^teemo$ team.html [NC]
+RewriteEngine on
 RewriteRule ^phpinfo$ phpinfo.php [NC]
+RewriteEngine on
 RewriteRule ^info$ phpinfo.php [NC]
+RewriteEngine on
 RewriteRule ^deploy$ deploy.php [NC]
 
