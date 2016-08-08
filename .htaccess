@@ -1,6 +1,6 @@
 RewriteEngine on
 
-RewriteRule ^info$ phpinfo.php  
+RewriteRule ^(.*)$ phpinfo.php  
 RewriteRule ^deployed$ deploy.php  
 
 
