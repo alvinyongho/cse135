@@ -19,6 +19,7 @@
 echo random_color();
 echo "<body style='background-color:pink'>";
 
+
 ?>
 
 </body>
