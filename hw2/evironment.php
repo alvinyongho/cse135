@@ -7,7 +7,7 @@
 
 <?php
 
-print_r($arr["_SERVER"]);
+print_r($_SERVER);
 
 ?>
 
