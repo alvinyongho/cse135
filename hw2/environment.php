@@ -6,7 +6,14 @@
 <body>
 
 <?php
-print_r($_SERVER);
+
+
+
+
+foreach ($_SERVER as $item) {
+    echo $item . "<br />";
+}
+
 ?>
 
 
