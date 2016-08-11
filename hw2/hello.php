@@ -3,7 +3,7 @@
 <head>
 </head>
 
-<body>
+<body style={ background-color: yellow;}>
 	
 <?php
 	echo '<p>Hello World from PHP on ' . date('Y-m-d h:i:s a') . '</p>';
