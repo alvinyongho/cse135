@@ -8,8 +8,9 @@
 <body>
 	
 <?php
-	echo '<p>Hello World from Language PHP on </p>';
-	print date('Y-m-d h:i:s a'); 
+
+	echo '<p>Hello World from PHP on ' . date('Y-m-d h:i:s a') . '</p>';
+	
 ?>
 
 </body>
