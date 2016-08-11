@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
@@ -8,9 +6,7 @@
 <body>
 	
 <?php
-
 	echo '<p>Hello World from PHP on ' . date('Y-m-d h:i:s a') . '</p>';
-	
 ?>
 
 </body>
