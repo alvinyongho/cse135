@@ -1,7 +1,4 @@
 #!/usr/bin/perl
-use CGI;
-$co = new CGI;  
-
 print "Content-type: text/html\n\n";
 print "Hello world from cgi which is not another name for perl although it is written in perl... anyways, the time is \n";
 $now_string = localtime();
@@ -13,11 +10,13 @@ my @colors = map {
 } (0..63);
 
 
-$co->start_html
-(
-    # -title=>'CGI Example', 
-    # -author=>'your Name', 
-    # -meta=>{'keywords'=>'CGI Perl'}, 
-    -BGCOLOR=>'black', 
-    # -LINK=>'red'
-)
+print "$colors"
+
+# $co->start_html
+# (
+#     -title=>'CGI Example', 
+#     -author=>'your Name', 
+#     -meta=>{'keywords'=>'CGI Perl'}, 
+#     -BGCOLOR=>'white', 
+#     -LINK=>'red'
+# )
