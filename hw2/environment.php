@@ -14,6 +14,8 @@ foreach ($_SERVER as $item) {
     echo $item;
 }
 
+?>
+
 
 </body>
 
