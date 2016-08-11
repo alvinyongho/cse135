@@ -8,9 +8,10 @@
 <body>
 	
 <?php
-	echo '<p>Hello World</p>';
+	$objDateTime = new DateTime('NOW');
+	echo '<p>Hello World from Language PHP on $objDateTime</p>';
 ?>
-	
+
 </body>
 
 </html>
