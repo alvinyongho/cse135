@@ -17,7 +17,7 @@
 }
 
 $rand_color = random_color();
-echo "<body style='background-color:{$rand_color}'>";
+echo "<body style='background-color:$rand_color'>";
 
 
 ?>
