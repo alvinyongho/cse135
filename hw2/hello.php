@@ -3,7 +3,7 @@
 <head>
 </head>
 
-<body style="background: yellow;">
+<body>
 	
 <?php
 	echo '<p>Hello World from PHP on ' . date('Y-m-d h:i:s a') . '</p>';
@@ -17,6 +17,7 @@
 }
 
 echo random_color();
+echo "<body style='background-color:pink'>";
 
 ?>
 
