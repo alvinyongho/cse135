@@ -9,7 +9,7 @@
 	
 <?php
 	$objDateTime = new DateTime('NOW');
-	echo '<p>Hello World from Language PHP on $objDateTime</p>';
+	echo "<p>Hello World from Language PHP on $objDateTime</p>";
 ?>
 
 </body>
