@@ -16,8 +16,8 @@
     return random_color_part() . random_color_part() . random_color_part();
 }
 
-echo random_color();
-echo "<body style='background-color:pink'>";
+$rand_color = random_color();
+echo "<body style='background-color:{$rand_color}'>";
 
 
 ?>
