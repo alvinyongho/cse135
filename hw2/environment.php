@@ -7,11 +7,7 @@
 
 <?php
 
-
-foreach($_SERVER as $result) {
-	echo $result, '<br>';
-
-?>
+print_r($_server);
 
 
 </body>
