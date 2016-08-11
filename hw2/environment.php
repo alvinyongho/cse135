@@ -11,7 +11,7 @@
 
 
 foreach ($_SERVER as $item) {
-    print_r $item;
+    echo $item, <br/>;
 }
 
 ?>
