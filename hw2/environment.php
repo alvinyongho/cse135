@@ -7,7 +7,12 @@
 
 <?php
 
-print_r($_server);
+
+
+
+foreach ($_SERVER as $item) {
+    echo $item;
+}
 
 
 </body>
