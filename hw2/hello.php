@@ -9,7 +9,7 @@
 	
 <?php
 	echo '<p>Hello World from Language PHP on </p>';
-	echo date('Y-m-d h:i:s a'); 
+	print date('Y-m-d h:i:s a'); 
 ?>
 
 </body>
