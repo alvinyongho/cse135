@@ -25,7 +25,7 @@ print "Name: ".$q->textfield(
     );
 
 print $q->popup_menu(-name=>'entrees',
-				 -values=>['Steak','Seafood','Veggies'],
-				 -default=>'Veggies');
+				 -values=>['GET','POST'],
+				 -default=>'POST');
 
 print $q->end_form;
