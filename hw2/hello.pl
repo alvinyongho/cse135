@@ -6,6 +6,6 @@ print "$now_string";
 
 
 
-for (1 .. 10) {
+# for (1 .. 10) {
     printf "%08X\n", rand(0xffffff);
-}
+# }
