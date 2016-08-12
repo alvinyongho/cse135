@@ -1,43 +1,56 @@
 #!/usr/bin/perl
-# Script to emulate a browser for posting to a 
-#   CGI program with method="POST".
+use CGI qw/:standard :html5/;
+# print "Content-type: text/html\n\n";
+# print "Hello world from CGI the time is \n";
+# $now_string = localtime();
+# print "$now_string";
 
-# Specify the URL of the page to post to.
-my $URLtoPostTo = "Dump.cgi";
+my @set = ('0' ..'9', 'A' .. 'F');
+my $random_color = join '' => map $set[rand @set], 1 .. 6;
 
-# Specify the information to post, the form field name on 
-#   the left of the => symbol and the value on the right.
-my %Fields = (
-   "name" => "Will Bontrager",
-   "email" => "name\@example.com",
+# # # print $random_color;
+
+# print body();
+
+
+
+$newStyle=<<END;
+<!-- 
+
+Body {
+	background-color: #$random_color
+}
+P.Tip {
+margin-right: 50pt;
+margin-left: 50pt;
+    color: red;
+}
+P.Alert {
+font-size: 30pt;
+    font-family: sans-serif;
+  color: red;
+}
+-->
+END
+print header();
+print start_html( 
+	-title=>'Hello CGI',
+	-style=>
+	{
+	    -code=>$newStyle}
 );
-# As seen above, "@" must be escaped when quoted.
 
-# If you want to specify a browser name, 
-#   do so between the quotation marks. 
-#   Otherwise, nothing between the quotes.
-my $BrowserName = "This Be Mine";
+print "Hello world from CGI the time is \n";
+$now_string = localtime();
+print "$now_string";
 
-# It's a good habit to always use the strict module.
-use strict;
 
-# Modules with routines for making the browser.
-use LWP::UserAgent;
-use HTTP::Request::Common;
-
-# Create the browser that will post the information.
-my $Browser = new LWP::UserAgent;
-
-# Insert the browser name, if specified.
-if($BrowserName) { $Browser->agent($BrowserName); }
-
-# Post the information to the CGI program.
-my $Page = $Browser->request(POST $URLtoPostTo,\%Fields);
-
-# Print the returned page (or an error message).
-print "Content-type: text/html\n\n";
-if ($Page->is_success) { print $Page->content; }
-else { print $Page->message; }
-
-# end of script
-
+# print h1('CGI with Style'),
+#       p({-class=>'Tip'},
+#     "Better read the cascading style sheet spec before playing with this!"),
+#       span({-style=>'color: magenta'},
+#        "Look Mom, no hands!",
+#        p(),
+#        "Whooo wee!"
+#        );
+print end_html;
