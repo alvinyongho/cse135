@@ -24,12 +24,15 @@ print "Name: ".$q->textfield(
         -maxlength => 30,
     );
 
+print $q->br;
+
 print "Favorite Color: ".$q->textfield(
         -name      => 'color',
         -value     => '',
         -size      => 20,
         -maxlength => 30,
     );
+
 
 print $q->popup_menu(-name=>'entrees',
 				 -values=>['GET','POST'],
