@@ -17,12 +17,15 @@ print $q->start_form(
 );
 
 
-print $q->textfield(
+print Name: $q->textfield(
         -name      => 'Name',
         -value     => '',
         -size      => 20,
         -maxlength => 30,
     );
-print $q->dropdown_menu(-name=>'myMethod', -values=>{'POST', 'GET'});
+
+print "Animal Name: ".
+ popup_menu(-name => "Name", -values => \@results).
+ submit.
 
 print $q->end_form;
