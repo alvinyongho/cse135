@@ -32,3 +32,5 @@ print $q->popup_menu(-name=>'entrees',
 print $q->submit(-value=>'Submit');
 
 print $q->end_form;
+
+print $q->end_html;
