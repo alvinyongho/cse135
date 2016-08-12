@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-use Template;
+use CGI;
 print "Content-type: text/html\n\n";
 print "Hello world from CGI the time is \n";
 $now_string = localtime();
