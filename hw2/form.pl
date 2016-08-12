@@ -2,9 +2,9 @@
 use strict;
 use warnings;
 use CGI;
-use CGI::Carp qw(fatalsToBrowser);
+# use CGI::Carp qw(fatalsToBrowser);
 
-my $q = new CGI;
+my $q = CGI->new;
 
 print $q->header;
 
