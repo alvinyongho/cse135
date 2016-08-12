@@ -3,6 +3,8 @@
 use Data::Dumper;
 use CGI;
 my $q = CGI->new;
+my @results = ('POST', 'GET');
+
  
 print $q->header;
 
@@ -24,7 +26,7 @@ print Name: $q->textfield(
         -maxlength => 30,
     );
 
-my @results = ('POST', 'GET');
+
 
 # print "Animal Name: ".
 #  popup_menu(-name => "Name", -values => \@results).
