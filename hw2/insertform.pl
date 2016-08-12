@@ -24,8 +24,10 @@ print Name: $q->textfield(
         -maxlength => 30,
     );
 
+@results = {'POST', 'GET'},
+
 print "Animal Name: ".
  popup_menu(-name => "Name", -values => \@results).
- submit.
+ submit;
 
 print $q->end_form;
