@@ -1,17 +1,12 @@
 #!/usr/bin/perl
 
-use strict;
+use Template;
+print "Content-type: text/html\n\n";
+print "Hello world from CGI the time is \n";
+$now_string = localtime();
+print "$now_string";
 
-Template;
-my $t = new Template;
+$random_color = rand(0xffffff);
 
-my $title = "Welcome";
-my $menu  = "Menu";
-my $text  = "Hello world.";
-
-print $t->header();
-print $t->content(
-	TITLE => $title,
-	MENU  => $menu,
-	TEXT  => $text,
-);
+# print $random_color;
+print body({-style=>'Color:red;'});
