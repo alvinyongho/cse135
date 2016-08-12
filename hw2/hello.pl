@@ -8,11 +8,5 @@ print "$now_string";
 $random_color = rand(0xffffff);
 
 # # print $random_color;
-print start_html(-title=>'Secrets of the Pyramids',
-			    -author=>'fred@capricorn.org',
-			    -base=>'true',
-			    -target=>'_blank',
-			    -meta=>{'keywords'=>'pharaoh secret mummy',
-				    'copyright'=>'copyright 1996 King Tut'},
-			    -style=>{'src'=>'/styles/style1.css'},
-			    -BGCOLOR=>'blue');
+
+print body();
