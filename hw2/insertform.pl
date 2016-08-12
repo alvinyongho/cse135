@@ -15,3 +15,13 @@ print $q->start_form(
         -action => '/where/your/form/gets/sent', # Defaults to 
                                                  # the current program
 );
+
+
+print $q->textfield(
+        -name      => 'Name',
+        -value     => 'default value',
+        -size      => 20,
+        -maxlength => 30,
+    );
+
+print $q->end_form;
