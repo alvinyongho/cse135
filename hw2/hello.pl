@@ -6,7 +6,7 @@ use CGI qw/:standard :html3/;
 # print "$now_string";
 
 my @set = ('0' ..'9', 'A' .. 'F');
-my $random_color = join '' => map $set[rand @set], 1 .. 8;
+my $random_color = join '' => map $set[rand @set], 1 .. 6;
 
 # # # print $random_color;
 
@@ -37,7 +37,6 @@ print start_html(
 	-title=>'Hello CGI',
 	-style=>
 	{
-#		-src=>'http://www.capricorn.com/style/st1.css',
 	    -code=>$newStyle}
 );
 
