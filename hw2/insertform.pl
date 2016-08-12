@@ -4,5 +4,7 @@ use Data::Dumper;
 use CGI;
 my $q = CGI->new;
  
+print $q->header;
 
-print $q->start_form;
+print $q->start_html(-title => 'A web form');
+#print $q->start_form;
