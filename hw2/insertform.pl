@@ -3,7 +3,7 @@
 use Data::Dumper;
 use CGI;
 my $q = CGI->new;
-my @results = ('POST', 'GET');
+# my @results = ('POST', 'GET');
 
  
 print $q->header;
