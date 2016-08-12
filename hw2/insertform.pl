@@ -1,28 +1,29 @@
 #!/usr/bin/perl
 
-use Data::Dumper;
+use strict;
+use warnings;
 use CGI;
-my $q = CGI->new;
- 
-print $q->header;
+use CGI::Carp qw{ fatalsToBrowser };
+use Template;
 
-print $q->start_html(-title => 'A web form');
-print $q->start_form(
-        -name    => 'main_form',
-        -method  => 'GET',
-        -enctype => &CGI::URL_ENCODED,
-        -onsubmit => 'return javascript:validation_function()',
-        -action => '/where/your/form/gets/sent', # Defaults to 
-                                                 # the current program
-);
+my $local_label = 'Choose a size:';
+my $local_name = 'size_select';
+my $db_eq_val = '20mm';
+my @sizes = ( "15mm", "20mm", "25mm"); 
 
 
-print $q->textfield(
-        -name      => 'Name',
-        -value     => '',
-        -size      => 20,
-        -maxlength => 30,
-    );
-print $q->end_form;
-print $q->dropdown_menu(-name=>'myMethod', -values=>{'POST', 'GET'});
+my $vars = {
+   select_label => $local_label,
+   select_name  => $local_name,
+   default      => $db_eq_val,
+   sizes        => \@sizes,
+};
 
+my $tname = 'templates/form.html';
+
+my $template = Template->new({
+    INCLUDE_PATH => '/Users/7stud/perl_programs/cgi_projects/1proj',
+});
+
+$template->process($tname, $vars)
+    or die "*MY* template process failed: ", $template->error(), "\n";
