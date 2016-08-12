@@ -3,8 +3,6 @@
 use Data::Dumper;
 use CGI;
 my $q = CGI->new;
-# my @results = ('POST', 'GET');
-
  
 print $q->header;
 
@@ -19,17 +17,15 @@ print $q->start_form(
 );
 
 
-print Name: $q->textfield(
+print "Name: ".$q->textfield(
         -name      => 'Name',
         -value     => '',
         -size      => 20,
         -maxlength => 30,
     );
 
-
-
-# print "Animal Name: ".
-#  popup_menu(-name => "Name", -values => \@results).
-#  submit;
+print "Animal Name: ".
+ popup_menu(-name => "Name", -values => \@results).
+ submit.
 
 print $q->end_form;
