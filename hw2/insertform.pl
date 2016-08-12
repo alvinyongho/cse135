@@ -23,5 +23,5 @@ print $q->textfield(
         -size      => 20,
         -maxlength => 30,
     );
-
+print $q->dropdown_menu(-name=>'myMethod', -values=>{'POST', 'GET'});
 print $q->end_form;
