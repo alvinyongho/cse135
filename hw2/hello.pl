@@ -8,5 +8,5 @@ print "$now_string";
 
 $random_color = rand(0xffffff);
 
-# print $random_color;
-print body({-style=>'Color:red;'});
+# # print $random_color;
+# print body({-style=>'Color:red;'});
