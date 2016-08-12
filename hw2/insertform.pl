@@ -33,6 +33,7 @@ print "Favorite Color: ".$q->textfield(
         -maxlength => 30,
     );
 
+print $q->br;
 
 print $q->popup_menu(-name=>'entrees',
 				 -values=>['GET','POST'],
