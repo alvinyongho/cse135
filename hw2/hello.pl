@@ -1,16 +1,17 @@
 #!/usr/bin/perl
 
-use CGI;
-print "Content-type: text/html\n\n";
-print "Hello world from CGI the time is \n";
-$now_string = localtime();
-print "$now_string";
+use strict;
 
-$random_color = rand(0xffffff);
+use CGI::Template;
+my $t = new CGI::Template;
 
-# print $random_color;
+my $title = "Welcome";
+my $menu  = "Menu";
+my $text  = "Hello world.";
 
-
-print start_html( -title=>'Body with background image',
-                  -style=>{'background-color:#$random_color'}
-             );
+print $t->header();
+print $t->content(
+	TITLE => $title,
+	MENU  => $menu,
+	TEXT  => $text,
+);
