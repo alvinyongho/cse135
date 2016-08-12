@@ -18,7 +18,14 @@ print $q->start_form(
 
 
 print "Name: ".$q->textfield(
-        -name      => 'Name',
+        -name      => 'name',
+        -value     => '',
+        -size      => 20,
+        -maxlength => 30,
+    );
+
+print "Favorite Color: ".$q->textfield(
+        -name      => 'color',
         -value     => '',
         -size      => 20,
         -maxlength => 30,
