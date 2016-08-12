@@ -28,7 +28,7 @@ print $q->popup_menu(-name=>'entrees',
 				 -values=>['GET','POST'],
 				 -default=>'POST');
 
-print $q->br;
+# print $q->br;
 print $q->submit(-value=>'Submit');
 
 print $q->end_form;
