@@ -5,7 +5,7 @@ use CGI qw/:standard :html3/;
 # $now_string = localtime();
 # print "$now_string";
 
-$random_color = rand(0xffffff);
+$random_color = floor(rand(0xffffff));
 
 # # # print $random_color;
 
@@ -17,7 +17,7 @@ $newStyle=<<END;
 <!-- 
 
 Body {
-	background-color: round(#$random_color)
+	background-color: $random_color
 }
 P.Tip {
 margin-right: 50pt;
