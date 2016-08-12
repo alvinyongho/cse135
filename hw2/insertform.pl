@@ -26,8 +26,8 @@ print Name: $q->textfield(
 
 @results = @{'POST', 'GET'},
 
-print "Animal Name: ".
- popup_menu(-name => "Name", -values => \@results).
- submit;
+# print "Animal Name: ".
+#  popup_menu(-name => "Name", -values => \@results).
+#  submit;
 
 print $q->end_form;
