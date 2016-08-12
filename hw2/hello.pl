@@ -35,12 +35,18 @@ print start_html(
 #		-src=>'http://www.capricorn.com/style/st1.css',
 	    -code=>$newStyle}
 );
-print h1('CGI with Style'),
-      p({-class=>'Tip'},
-    "Better read the cascading style sheet spec before playing with this!"),
-      span({-style=>'color: magenta'},
-       "Look Mom, no hands!",
-       p(),
-       "Whooo wee!"
-       );
+
+print "Hello world from CGI the time is \n";
+$now_string = localtime();
+print "$now_string";
+
+
+# print h1('CGI with Style'),
+#       p({-class=>'Tip'},
+#     "Better read the cascading style sheet spec before playing with this!"),
+#       span({-style=>'color: magenta'},
+#        "Look Mom, no hands!",
+#        p(),
+#        "Whooo wee!"
+#        );
 print end_html;
