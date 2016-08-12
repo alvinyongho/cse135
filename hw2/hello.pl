@@ -2,8 +2,8 @@
 
 use strict;
 
-use CGI::Template;
-my $t = new CGI::Template;
+Template;
+my $t = new Template;
 
 my $title = "Welcome";
 my $menu  = "Menu";
