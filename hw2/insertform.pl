@@ -19,7 +19,7 @@ print $q->start_form(
 
 print $q->textfield(
         -name      => 'Name',
-        -value     => 'default value',
+        -value     => '',
         -size      => 20,
         -maxlength => 30,
     );
