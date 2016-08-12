@@ -28,10 +28,13 @@ font-size: 30pt;
 -->
 END
 print header();
-print start_html( -title=>'CGI with Style',
-	      -style=>{-src=>'http://www.capricorn.com/style/st1.css',
-	               -code=>$newStyle}
-             );
+print start_html( 
+	-title=>'Hello CGI',
+	-style=>
+	{
+#		-src=>'http://www.capricorn.com/style/st1.css',
+	    -code=>$newStyle}
+);
 print h1('CGI with Style'),
       p({-class=>'Tip'},
     "Better read the cascading style sheet spec before playing with this!"),
