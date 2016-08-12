@@ -1,33 +1,16 @@
 #!/usr/bin/perl
 
-
-sub xcgi_InitForm
-{
-  my($h) = '[a-fA-F0-9]';
-  my($buff, @params, $param);
-  my($param_name, $param_value);
-  local(*xcgi_form) = @_ if @_;
-
-  read(STDIN, $buff, $ENV{'CONTENT_LENGTH'});
-
-  @params = split(/&/, $buff);
-
-  foreach $param (@params)
-  {
-    ($param_name, $param_value) = split(/=/, $param);
-
-    $param_value =~ tr/+/ /;
-    $param_value =~ s/%($h$h)/pack("C",hex($1))/eg;
-
-    $xcgi_form{$param_name} = $param_value;
-  }
-}
-
-{
-  my(@form);
-
-  xcgi_InitForm(*form);
-
-  $url = $form{'url'};
-  print "Location: $urlnn";
+use Data::Dumper;
+use CGI;
+my $q = CGI->new;
+ 
+my %data;
+$data{fullname} = $q->param('fullname');
+$data{country} = $q->param('country');
+$data{question} = $q->param('question');
+ 
+print $q->header;
+if ($data{fullname} !~ /^[\s\w.-]+$/) {
+	print "Name must contain only alphanumerics, spaces, dots and dashes.";
+	exit;
 }
