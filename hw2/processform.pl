@@ -4,9 +4,9 @@ use Data::Dumper;
 use CGI qw/:standard :html3/;
 my $q = CGI->new;
  
-# print $q->header;
+print $q->header;
 
-print $q->start_html(-title => 'Process Form');
+print $q->start_html(-title => 'Process form');
 
 my $request_type = $ENV{'REQUEST_METHOD'};
 my $query_to_parse = '';
