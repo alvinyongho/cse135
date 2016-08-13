@@ -68,8 +68,9 @@ if ($request_type eq 'POST'){
 	print " nice to meet you!";
 
 
-	print "<button type='submit' id='clear_session' name='delete'>Clear Session</button>";
-
+	$q->Button(-text => 'Print',
+                   -command => sub{clear_session}
+                   )->pack;
 
 } elsif ($request_type eq 'GET'){
 	# print 'IT WAS A GET';
@@ -87,6 +88,9 @@ if(defined $q->param('delete')){
     print "Session will be deleted.\n";
 }
 
+sub clear_session{
+	$s->clear();
+}
 
 
 
