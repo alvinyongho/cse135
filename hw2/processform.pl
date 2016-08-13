@@ -20,13 +20,8 @@ if ($request_type eq 'POST'){
 
 	my @keys = $q->param();
 
-	my( $name, $value );
+	print $keys['name'];
 
-	foreach $name ( $q->param ) {
-    	print "$name:\n";
-    	foreach $value ( $q->param( $name ) ) {
-        	print "  $value\n";
-    }
 }
 
 } elsif ($request_type eq 'GET'){
