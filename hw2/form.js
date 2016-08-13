@@ -17,6 +17,10 @@ function validate(){
 }
 
 
-form validate_session(){
+function validate_session(){
 
+}
+
+function clear_session(){
+	
 }

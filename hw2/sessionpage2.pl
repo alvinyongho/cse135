@@ -68,8 +68,19 @@ if ($request_type eq 'POST'){
 	print " nice to meet you!";
 
 
+	print $q->start_form(
+        -name    => 'clear_form',
+        -id      => 'clearForm',
+        -method  => 'POST',
+        -enctype => &CGI::URL_ENCODED,
+        -onsubmit => 'clear_session()',
+        -action => '', # Defaults to 
+                                                 # the current program
+	);
+
 	print "<input type='submit' id='clear_session' name='delete'>Clear Session</button>";
 
+	print $q->end_form;
 
 } elsif ($request_type eq 'GET'){
 	# print 'IT WAS A GET';
