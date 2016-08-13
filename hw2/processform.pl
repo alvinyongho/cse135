@@ -1,7 +1,6 @@
 #!/usr/bin/perl
 
 use Data::Dumper;
-use CGI;
 use CGI qw/:standard :html3/;
 my $q = CGI->new;
  
