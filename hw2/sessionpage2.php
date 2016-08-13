@@ -21,6 +21,8 @@
 			if (isset($_SESSION['name']))
 			{
     			echo $_SESSION['name'];
+			} else {
+				"Howdy stranger...tell me your name on page1!";
 			}
 
 
@@ -42,7 +44,9 @@ $background_color = '#CCDDEE';
 
 echo "<body style='background-color:$background_color'>";
 
-
+	function delete_session(){
+		echo "<button>Delete</button>";
+	}
 
 ?>
 
