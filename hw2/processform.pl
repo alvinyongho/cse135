@@ -18,9 +18,9 @@ if ($request_type eq 'POST'){
 
 	print "These are the parameters I received:\n\n";
 
-	my @keys = $q->param();
+	my $name = $q->param('name');
+	print $name;
 
-	print $keys('name');
 
 }
 
