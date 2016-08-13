@@ -19,7 +19,7 @@ if ($request_type eq 'POST'){
 	print "These are the parameters I received:\n\n";
 
 
-	print $q->param('name');
+	print "Hello " . $q->param('name');
 
 
 } elsif ($request_type eq 'GET'){
@@ -29,3 +29,45 @@ if ($request_type eq 'POST'){
 }
 
 
+
+
+$newStyle=<<END;
+<!-- 
+
+Body {
+	background-color: #CCDDEE
+}
+P.Tip {
+margin-right: 50pt;
+margin-left: 50pt;
+    color: red;
+}
+P.Alert {
+font-size: 30pt;
+    font-family: sans-serif;
+  color: red;
+}
+-->
+END
+print header();
+print start_html( 
+	-title=>'Hello CGI',
+	-style=>
+	{
+	    -code=>$newStyle}
+);
+
+print "Hello world from CGI the time is \n";
+$now_string = localtime();
+print "$now_string";
+
+
+# print h1('CGI with Style'),
+#       p({-class=>'Tip'},
+#     "Better read the cascading style sheet spec before playing with this!"),
+#       span({-style=>'color: magenta'},
+#        "Look Mom, no hands!",
+#        p(),
+#        "Whooo wee!"
+#        );
+print end_html;
