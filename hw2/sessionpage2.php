@@ -14,7 +14,7 @@
 	switch($method){
 		case 'GET':
 			echo '<p>Hello ';
-			echo $_SESSION['name']
+			// echo $_SESSION['name']
 			// echo ' from PHP on ' . date('Y-m-d h:i:s a') . '</p>';
 			// delete_session();
 			break;
