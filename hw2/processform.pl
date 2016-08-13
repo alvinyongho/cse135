@@ -18,9 +18,15 @@ if ($request_type eq 'POST'){
 
 	print "These are the parameters I received:\n\n";
 
-	print $q->param();
+	
 
+	my( $name, $value );
 
+	foreach $name ( $q->param ) {
+    	print "$name:\n";
+    	foreach $value ( $q->param( $name ) ) {
+        	print "  $value\n";
+    }
 }
 
 } elsif ($request_type eq 'GET'){
