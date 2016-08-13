@@ -47,9 +47,9 @@ $background_color = '#CCDDEE';
 echo "<body style='background-color:$background_color'>";
 
 	function delete_session(){
-		echo "<form id='myClear' name='main_clear' method='POST' action ='cleared'>"
-		echo "<input type='submit' value='Submit'>"
-		echo "</form>"
+		// echo "<form id='myClear' name='main_clear' method='POST' action ='cleared'>"
+		// echo "<input type='submit' value='Submit'>"
+		// echo "</form>"
 
 	}
 
