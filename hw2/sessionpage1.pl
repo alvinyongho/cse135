@@ -1,8 +1,8 @@
 #!/usr/bin/perl
 
 use Data::Dumper;
-use CGI::Session;
 use CGI qw/:standard :html3/;
+use CGI::Session;
 my $q = CGI->new;
  
 print $q->header;
