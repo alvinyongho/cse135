@@ -68,9 +68,8 @@ if ($request_type eq 'POST'){
 	print " nice to meet you!";
 
 
-	$main->Button(-text => 'Print',
-                   -command => sub{clear_session}
-                   )->pack;
+	print "<input type='submit' id='clear_session' name='delete'>Clear Session</button>";
+
 
 } elsif ($request_type eq 'GET'){
 	# print 'IT WAS A GET';
@@ -82,15 +81,12 @@ if ($request_type eq 'POST'){
 }
 
 
-if(defined $q->param('delete')){
+if($cgi->param('clear_session')){
     # delete session
     $s->delete;
     print "Session will be deleted.\n";
 }
 
-sub clear_session{
-	$s->clear();
-}
 
 
 
