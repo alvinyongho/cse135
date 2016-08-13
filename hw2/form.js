@@ -8,6 +8,9 @@ function validate(){
 	console.log(color);
 	console.log(ins_method);
 
+	console.log(document.forms["main_form"].attr("method"));
+
+
 	// document.getElementById('color')
 	// $("#myPost").attr("method", "get");
 }
