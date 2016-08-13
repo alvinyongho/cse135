@@ -7,8 +7,6 @@ my $q = CGI->new;
 print $q->header;
 
 
-
-
 $newStyle=<<END;
 <!-- 
 
