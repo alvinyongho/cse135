@@ -8,9 +8,11 @@ print $q->header;
 
 print $q->start_html(-title => 'A web form');
 
+my $request_type = $ENV{'REQUEST_METHOD'};
 
 
-
-if {$ENV{'REQUEST_METHOD'} eq "GET"} {
-	print $ENV{'REQUEST_METHOD'};
+if ($request_type eq 'POST'){
+	print 'THIS WAS A POST'
+} elsif ($request_type eq 'GET'){
+	print 'IT WAS A GET'
 }
