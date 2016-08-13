@@ -53,6 +53,9 @@ if ($request_type eq 'POST'){
 	print " nice to meet you!";
 
 
+	print "<button id='clear_session'>Clear</button>";
+
+
 } elsif ($request_type eq 'GET'){
 	# print 'IT WAS A GET';
 	# $request = $ENV{'QUERY_STRING'};
