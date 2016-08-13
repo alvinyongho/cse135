@@ -67,24 +67,28 @@ if ($request_type eq 'POST'){
 	# printf "CGI Params: %s\n", join ', ', $q->param;
 
 
-	print "Hello " . $q->param('name');
-	print " nice to meet you!";
+	if (defined $q->param('name')){
+		print "Hello " . $q->param('name');
+		print " nice to meet you!";
 
 
-	print $q->start_form(
-        -name    => 'clear_form',
-        -id      => 'clearForm',
-        -method  => 'POST',
-        -enctype => &CGI::URL_ENCODED,
-        -onsubmit => 'clear_session()',
-        -action => '', # Defaults to 
-                                                 # the current program
-	);
 
-	# print "<input type='submit' id='clear_session' name='delete'>Clear Session</button>";
-	print "<button type='submit' name='delete'>Delete session</button>";
+		print $q->start_form(
+	        -name    => 'clear_form',
+	        -id      => 'clearForm',
+	        -method  => 'POST',
+	        -enctype => &CGI::URL_ENCODED,
+	        -onsubmit => 'clear_session()',
+	        -action => '', # Defaults to 
+	                                                 # the current program
+		);
 
-	print $q->end_form;
+
+		# print "<input type='submit' id='clear_session' name='delete'>Clear Session</button>";
+		print "<button type='submit' name='delete'>Delete session</button>";
+
+		print $q->end_form;
+	}
 
 } elsif ($request_type eq 'GET'){
 	# print 'IT WAS A GET';
