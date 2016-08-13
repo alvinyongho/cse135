@@ -53,7 +53,7 @@ if ($request_type eq 'POST'){
 	print " nice to meet you!";
 
 
-	print "<button id='clear_session'>Clear</button>";
+	print "<button id='clear_session'>Clear Session</button>";
 
 
 } elsif ($request_type eq 'GET'){
