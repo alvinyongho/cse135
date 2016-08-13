@@ -82,7 +82,7 @@ if ($request_type eq 'POST'){
 	);
 
 	# print "<input type='submit' id='clear_session' name='delete'>Clear Session</button>";
-	print $q->submit(-value=>'Submit' -name=>'clear_sesh');
+	print "<button type="submit" name="delete">Delete session</button>";
 
 	print $q->end_form;
 
