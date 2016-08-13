@@ -10,7 +10,9 @@
 
 
 	$method = $_SERVER['REQUEST_METHOD'];
-	switch($method){
+
+	echo $method;
+	<!-- switch($method){
 		case 'GET':
 			echo 'GET';
 
@@ -20,7 +22,7 @@
 		case 'POST':
 			echo 'POST';
 			break;
-	}
+	} -->
 
 
 $background_color = '#CCDDEE';

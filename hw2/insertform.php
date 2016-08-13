@@ -26,7 +26,7 @@ echo "<body style='background-color:$background_color'>";
 
 
 	<select name="ins_method">
-		<option value="POST">Post</option>
+		<option value="POST">POST</option>
 		<option value="GET">GET</option>
 	</select>
 
