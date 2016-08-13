@@ -9,7 +9,7 @@ my $q = CGI->new;
  
 my $s = CGI::Session->new($q);
 
-print $s->header();
+# print $s->header();
 
 print $q->header;
 
