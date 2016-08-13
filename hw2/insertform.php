@@ -30,6 +30,7 @@ echo "<body style='background-color:$background_color'>";
 		<option value="GET">GET</option>
 	</select>
 
+	<input type="submit" value="Submit">
 
 </form>
 
