@@ -14,13 +14,11 @@
 		case 'GET':
 			echo 'GET';
 
-			echo '<p>Hello $_GET['name'] from PHP on ' . date('Y-m-d h:i:s a') . '</p>';
+			echo '<p>Hello World from PHP on ' . date('Y-m-d h:i:s a') . '</p>';
 
 			break;
 		case 'POST':
 			echo 'POST';
-
-			echo '<p>Hello $_POST['name'] from PHP on ' . date('Y-m-d h:i:s a') . '</p>';
 			break;
 	}
 
