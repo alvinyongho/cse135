@@ -15,3 +15,8 @@ function validate(){
 	// document.getElementById('color')
 	// $("#myPost").attr("method", "get");
 }
+
+
+form validate_session(){
+
+}
