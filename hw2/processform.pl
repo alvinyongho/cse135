@@ -42,7 +42,7 @@ print start_html(
 
 
 if ($request_type eq 'POST'){
-	print 'THIS WAS A POST';
+	# print 'THIS WAS A POST';
 	# read(STDIN, $request, $ENV{'CONTENT_LENGTH'}) || die "Couldn't get the query\n";
 	# print $request;
 
