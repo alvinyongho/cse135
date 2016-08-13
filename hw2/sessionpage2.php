@@ -32,7 +32,7 @@
 			echo '<p>Hello ';
 			echo $_POST["name"];
 
-
+			echo "adding name to session";
 			$_SESSION['name']  =  $_POST['name'];
 			delete_session();
 
