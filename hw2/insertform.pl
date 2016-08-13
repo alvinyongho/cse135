@@ -1,12 +1,12 @@
 #!/usr/bin/perl
 
 use Data::Dumper;
-use CGI;
+use CGI qw/:standard :html3/;
 my $q = CGI->new;
  
 print $q->header;
 
-print $q->start_html(-title => 'A web form');
+print $q->start_html(-title => 'Insert Form');
 
 
 print "<script src='form.js'    type='text/javascript'></script>\n";
