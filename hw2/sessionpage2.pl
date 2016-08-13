@@ -99,7 +99,7 @@ if ($request_type eq 'POST'){
 if(defined $q->param('delete')){
     # delete session
     $s->delete;
-    print "Session will be deleted.\n";
+    print "Session deleted.\n";
 }
 
 
