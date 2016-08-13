@@ -21,6 +21,7 @@
 			if (isset($_SESSION['name']))
 			{
     			echo $_SESSION['name'];
+    			delete_session();
 			} else {
 				"Howdy stranger...tell me your name on page1!";
 			}
@@ -33,7 +34,7 @@
 
 
 			$_SESSION['name']  =  $_POST['name'];
-			// delete_session();
+			delete_session();
 
 			// echo ' from PHP on ' . date('Y-m-d h:i:s a') . '</p>';
 			break;
