@@ -14,7 +14,7 @@ print "<script src='form.js'    type='text/javascript'></script>\n";
 
 print $q->start_form(
         -name    => 'main_form',
-        -id      => 'myPost',
+        -id      => 'myForm',
         -method  => 'GET',
         -enctype => &CGI::URL_ENCODED,
         -onsubmit => 'validate()',
