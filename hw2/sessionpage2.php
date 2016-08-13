@@ -17,6 +17,13 @@
 			// echo $_SESSION['name']
 			// echo ' from PHP on ' . date('Y-m-d h:i:s a') . '</p>';
 			// delete_session();
+
+			if (isset($_SESSION['name']))
+			{
+    			//Do stuff
+			}
+
+
 			break;
 		case 'POST':
 			echo '<p>Hello ';
