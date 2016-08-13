@@ -13,7 +13,7 @@
 	switch($method){
 		case 'GET':
 			echo 'GET';
-
+			echo $_GET["name"];
 			echo '<p>Hello World from PHP on ' . date('Y-m-d h:i:s a') . '</p>';
 
 			break;
