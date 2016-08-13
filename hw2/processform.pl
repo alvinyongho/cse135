@@ -59,6 +59,12 @@ if ($request_type eq 'POST'){
 	print 'IT WAS A GET';
 	$request = $ENV{'QUERY_STRING'};
 	print $request;
+
+	print "Hello " . $q->param('name');
+	print " from a Web app written in CGI on \n";
+	$now_string = localtime();
+	print "$now_string";
+	
 }
 
 
