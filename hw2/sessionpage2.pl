@@ -96,11 +96,12 @@ if ($request_type eq 'POST'){
 }
 
 
-if($cgi->param('clear_session')){
+if(defined $q->param('delete')){
     # delete session
     $s->delete;
     print "Session will be deleted.\n";
 }
+
 
 
 
