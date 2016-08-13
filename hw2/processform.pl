@@ -33,12 +33,12 @@ font-size: 30pt;
 -->
 END
 # print header();
-# print start_html( 
-# 	-title=>'Hello CGI',
-# 	-style=>
-# 	{
-# 	    -code=>$newStyle}
-# );
+print start_html( 
+	-title=>'Hello CGI',
+	-style=>
+	{
+	    -code=>$newStyle}
+);
 
 
 if ($request_type eq 'POST'){
