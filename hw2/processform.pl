@@ -3,7 +3,14 @@
 use Data::Dumper;
 use CGI;
 my $q = CGI->new;
- 
+
+
+
+my @set = ('0' ..'9', 'A' .. 'F');
+my $random_color = join '' => map $set[rand @set], 1 .. 6;
+
+
+
 print $q->header;
 
 print $q->start_html(-title => 'A web form');
@@ -19,15 +26,18 @@ if ($request_type eq 'POST'){
 	print "These are the parameters I received:\n\n";
 
 
-	print $q->param('name');
+	print "Hello " . $q->param('name');
 
-	my( $name, $value );
 
-	foreach $name ( $q->param ) {
-    	print "$name:\n";
-    	foreach $value ( $q->param( $name ) ) {
-        	print "  $value\n";
-    }
+	# print $q->param('color');
+
+	# my( $name, $value );
+
+	# foreach $name ( $q->param ) {
+ #    	print "$name:\n";
+ #    	foreach $value ( $q->param( $name ) ) {
+ #        	print "  $value\n";
+ #    }
 }
 
 } elsif ($request_type eq 'GET'){
