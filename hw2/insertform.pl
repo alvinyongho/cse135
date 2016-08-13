@@ -17,8 +17,8 @@ print $q->start_form(
         -id      => 'myPost',
         -method  => 'GET',
         -enctype => &CGI::URL_ENCODED,
-        -onsubmit => 'validate()'
-        # -action => '/where/your/form/gets/sent', # Defaults to 
+        -onsubmit => 'validate()',
+        -action => '/where/your/form/gets/sent', # Defaults to 
                                                  # the current program
 );
 
@@ -41,7 +41,7 @@ print "Favorite Color: ".$q->textfield(
 
 print $q->br;
 
-print $q->popup_menu(-name=>'entrees',
+print $q->popup_menu(-name=>'ins_method',
 				 -values=>['GET','POST'],
 				 -default=>'POST');
 
