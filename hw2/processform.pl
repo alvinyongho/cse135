@@ -20,6 +20,7 @@ if ($request_type eq 'POST'){
 	print "These are the parameters I received:\n\n";
 
 
+	my @params    = param();
 	my( $name, $value );
 
 	foreach $name ( $q->param ) {
