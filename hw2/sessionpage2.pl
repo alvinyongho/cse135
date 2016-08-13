@@ -71,7 +71,7 @@ if ($request_type eq 'POST'){
 		print "Hello " . $q->param('name');
 		print " nice to meet you!";
 
-		$session->param("name", $q->param('name'));
+		$s->param("name", $q->param('name'));
 
 
 		print $q->start_form(
