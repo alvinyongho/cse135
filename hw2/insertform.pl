@@ -7,6 +7,8 @@ my $q = CGI->new;
 print $q->header;
 
 
+
+
 $newStyle=<<END;
 <!-- 
 
@@ -27,7 +29,9 @@ font-size: 30pt;
 END
 
 print $q->start_html(-title=>'Insert Form CGI',
-    -style=>{-code=>$newStyle}
+    -style=>{
+        -code=>$newStyle
+    }
 );
 
 
