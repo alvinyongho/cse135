@@ -20,7 +20,7 @@
 
 			if (isset($_SESSION['name']))
 			{
-    			//Do stuff
+    			echo $_SESSION['name'];
 			}
 
 
