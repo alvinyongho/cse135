@@ -12,17 +12,6 @@
 	$method = $_SERVER['REQUEST_METHOD'];
 
 	echo $method;
-	<!-- switch($method){
-		case 'GET':
-			echo 'GET';
-
-			echo '<p>Hello World from PHP on ' . date('Y-m-d h:i:s a') . '</p>';
-
-			break;
-		case 'POST':
-			echo 'POST';
-			break;
-	} -->
 
 
 $background_color = '#CCDDEE';
