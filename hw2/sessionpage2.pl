@@ -10,7 +10,7 @@ use CGI::Session;
 
 my $q = CGI->new;
  
-my $s = CGI::Session->new($q);
+# my $s = CGI::Session->new($q);
 
 
 print $q->header;
