@@ -73,22 +73,8 @@ if ($request_type eq 'POST'){
 
 		$s->param("name", $q->param('name'));
 
-
-		print $q->start_form(
-	        -name    => 'clear_form',
-	        -id      => 'clearForm',
-	        -method  => 'POST',
-	        -enctype => &CGI::URL_ENCODED,
-	        -onsubmit => 'clear_session()',
-	        -action => '', # Defaults to 
-	                                                 # the current program
-		);
-
-
-		# print "<input type='submit' id='clear_session' name='delete'>Clear Session</button>";
-		print "<button type='submit' name='delete'>Delete session</button>";
-
-		print $q->end_form;
+		delete_form();
+		
 	}
 
 } elsif ($request_type eq 'GET'){
@@ -99,8 +85,9 @@ if ($request_type eq 'POST'){
 
 	if (defined $s->param('name')){
 		print "Hello " . $s->param('name');
+		delete_form();
 	} else {
-		print "other message";
+		print "Howdy stranger...tell me your name on page1!";
 	}
 
 	
@@ -121,6 +108,24 @@ if(defined $q->param('delete')){
 }
 
 
+
+sub delete_form(){
+	print $q->start_form(
+	        -name    => 'clear_form',
+	        -id      => 'clearForm',
+	        -method  => 'POST',
+	        -enctype => &CGI::URL_ENCODED,
+	        -onsubmit => 'clear_session()',
+	        -action => '', # Defaults to 
+	                                                 # the current program
+		);
+
+
+		# print "<input type='submit' id='clear_session' name='delete'>Clear Session</button>";
+		print "<button type='submit' name='delete'>Delete session</button>";
+
+		print $q->end_form;
+}
 
 
 
