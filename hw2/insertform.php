@@ -20,6 +20,12 @@ echo "<body style='background-color:$background_color'>";
 
 
 <form id='myForm' name='main_form' method='POST' onsubmit='validate()' action ='processform.php'>
+
+	Name: <input type="text" name="name" value="<?php echo $name;?>">
+
+	Favorite Color: <input type="text" name="color" value="<?php echo $color;?>">
+
+
 </form>
 
 
