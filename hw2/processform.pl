@@ -12,9 +12,9 @@ my $request_type = $ENV{'REQUEST_METHOD'};
 my $query_to_parse = '';
 
 if ($request_type eq 'POST'){
-	print 'THIS WAS A POST'
+	print 'THIS WAS A POST';
 
 } elsif ($request_type eq 'GET'){
-	print 'IT WAS A GET'
+	print 'IT WAS A GET';
 	print $ENV{'QUERY_STRING'};
 }
