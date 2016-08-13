@@ -71,6 +71,7 @@ if ($request_type eq 'POST'){
 		print "Hello " . $q->param('name');
 		print " nice to meet you!";
 
+		$session->param("name", $q->param('name'));
 
 
 		print $q->start_form(
@@ -96,6 +97,12 @@ if ($request_type eq 'POST'){
 	# print $request;
 
 	print "Uhh what are you doing!?";
+
+
+	# retrieve the session name
+
+	# if doesnt exist print that other message
+
 
 }
 
