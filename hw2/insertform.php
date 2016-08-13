@@ -4,7 +4,8 @@
 </head>
 
 <body>
-	
+
+<script src='form.js'    type='text/javascript'></script>
 <?php
 	// echo '<p>Hello World from PHP on ' . date('Y-m-d h:i:s a') . '</p>';
 
