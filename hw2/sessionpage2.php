@@ -8,7 +8,7 @@
 <?php
 	
 	session_start();
-	echo session_id();
+	// echo session_id();
 
 	$method = $_SERVER['REQUEST_METHOD'];
 	switch($method){
@@ -36,7 +36,7 @@
 			echo $_POST["name"];
 			echo " nice to meet you!";
 
-			echo "adding name to session";
+			// echo "adding name to session";
 			$_SESSION['name']  =  $_POST['name'];
 			delete_session();
 
