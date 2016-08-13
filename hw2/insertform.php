@@ -6,7 +6,7 @@
 <body>
 	
 <?php
-	echo '<p>Hello World from PHP on ' . date('Y-m-d h:i:s a') . '</p>';
+	// echo '<p>Hello World from PHP on ' . date('Y-m-d h:i:s a') . '</p>';
 
 
 $background_color = '#CCDDEE';
