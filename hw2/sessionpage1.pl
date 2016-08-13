@@ -45,10 +45,10 @@ print $q->start_html(-title=>'Insert Form CGI',
 print "<script src='form.js'    type='text/javascript'></script>\n";
 
 
-printf "Your session ID is: %s\n", $s->id;
-printf "This sessin is: %s\n", $s->is_new ? 'NEW': 'old';
-printf "Stored session 'test' value: '%s'\n", $q->escapeHTML($s->param('test'));
-printf "CGI Params: %s\n", join ', ', $q->param;
+# printf "Your session ID is: %s\n", $s->id;
+# printf "This sessin is: %s\n", $s->is_new ? 'NEW': 'old';
+# printf "Stored session 'test' value: '%s'\n", $q->escapeHTML($s->param('test'));
+# printf "CGI Params: %s\n", join ', ', $q->param;
 
 
 print $q->start_form(
