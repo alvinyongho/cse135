@@ -14,8 +14,10 @@ my $query_to_parse = '';
 if ($request_type eq 'POST'){
 	print 'THIS WAS A POST';
 	read(STDIN, $request, $ENV{'CONTENT_LENGTH'}) || die "Couldn't get the query\n";
+	print $request;
 
 } elsif ($request_type eq 'GET'){
 	print 'IT WAS A GET';
-	print $ENV{'QUERY_STRING'};
+	$request = $ENV{'QUERY_STRING'};
+	print $request;
 }
