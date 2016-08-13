@@ -46,10 +46,13 @@ if ($request_type eq 'POST'){
 	# read(STDIN, $request, $ENV{'CONTENT_LENGTH'}) || die "Couldn't get the query\n";
 	# print $request;
 
-	print "These are the parameters I received:\n\n";
+	# print "These are the parameters I received:\n\n";
 
 
 	print "Hello " . $q->param('name');
+	print " from a Web app written in CGI on \n";
+	$now_string = localtime();
+	print "$now_string";
 
 
 } elsif ($request_type eq 'GET'){
@@ -60,9 +63,7 @@ if ($request_type eq 'POST'){
 
 
 
-print "Hello world from CGI the time is \n";
-$now_string = localtime();
-print "$now_string";
+
 
 
 # print h1('CGI with Style'),
