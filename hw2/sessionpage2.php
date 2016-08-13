@@ -7,7 +7,6 @@
 	
 <?php
 	
-	session_start();
 
 
 	$method = $_SERVER['REQUEST_METHOD'];
@@ -16,7 +15,7 @@
 			echo '<p>Hello ';
 			echo $_SESSION['name']
 			// echo ' from PHP on ' . date('Y-m-d h:i:s a') . '</p>';
-			delete_session();
+			// delete_session();
 			break;
 		case 'POST':
 			echo '<p>Hello ';
@@ -24,7 +23,7 @@
 
 
 			$_SESSION['name']  =  $_GET['name'];
-			delete_session();
+			// delete_session();
 
 			// echo ' from PHP on ' . date('Y-m-d h:i:s a') . '</p>';
 			break;
@@ -36,22 +35,7 @@ $background_color = '#CCDDEE';
 echo "<body style='background-color:$background_color'>";
 
 
-	function delete_session(){
-		echo "<button>Delete Session</button>";
-	}
 
-	public function destroy()
-    {
-        if ( $this->sessionState == self::SESSION_STARTED )
-        {
-            $this->sessionState = !session_destroy();
-            unset( $_SESSION );
-            
-            return !$this->sessionState;
-        }
-        
-        return FALSE;
-    }
 
 ?>
 
