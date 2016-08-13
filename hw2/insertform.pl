@@ -44,7 +44,7 @@ print $q->start_form(
         -method  => 'POST',
         -enctype => &CGI::URL_ENCODED,
         -onsubmit => 'validate()',
-        -action => 'processform.pl', # Defaults to 
+        -action => 'echo.pl', # Defaults to 
                                                  # the current program
 );
 
