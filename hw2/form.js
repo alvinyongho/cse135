@@ -8,7 +8,8 @@ function validate(){
 	console.log(color);
 	console.log(ins_method);
 
-	console.log(document.forms["main_form"].attr("method"));
+	document.getElementById("myForm").method = ins_method;
+	// console.log(document.forms["main_form"].attr("method"));
 
 
 	// document.getElementById('color')
