@@ -68,7 +68,7 @@ if ($request_type eq 'POST'){
 	print " nice to meet you!";
 
 
-	print "<button id='clear_session' onclick='deleteSession()'>Clear Session</button>";
+	print "<button id='clear_session' onclick='deleteSession'>Clear Session</button>";
 
 
 } elsif ($request_type eq 'GET'){
@@ -79,6 +79,8 @@ if ($request_type eq 'POST'){
 	print "Uhh what are you doing!?";
 
 }
+
+
 
 
 sub deleteSession {
