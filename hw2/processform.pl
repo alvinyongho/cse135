@@ -2,13 +2,7 @@
 
 use Data::Dumper;
 use CGI;
-use CGI qw/:standard :html3/;
 my $q = CGI->new;
-
-
-
-my @set = ('0' ..'9', 'A' .. 'F');
-my $random_color = join '' => map $set[rand @set], 1 .. 6;
 
 
 
