@@ -16,8 +16,13 @@ if ($request_type eq 'POST'){
 	read(STDIN, $request, $ENV{'CONTENT_LENGTH'}) || die "Couldn't get the query\n";
 	print $request;
 
+	my $value = $q->param('name');
+	
+
 } elsif ($request_type eq 'GET'){
 	print 'IT WAS A GET';
 	$request = $ENV{'QUERY_STRING'};
 	print $request;
 }
+
+
