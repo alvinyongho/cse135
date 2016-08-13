@@ -18,7 +18,7 @@ print $q->start_form(
         -method  => 'GET',
         -enctype => &CGI::URL_ENCODED,
         -onsubmit => 'validate()',
-        -action => '/where/your/form/gets/sent', # Defaults to 
+        -action => 'processform.pl', # Defaults to 
                                                  # the current program
 );
 
