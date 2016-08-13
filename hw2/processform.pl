@@ -2,7 +2,6 @@
 
 use Data::Dumper;
 use CGI;
-use CGI ':standard';
 my $q = CGI->new;
  
 print $q->header;
@@ -19,8 +18,8 @@ if ($request_type eq 'POST'){
 
 	print "These are the parameters I received:\n\n";
 
+	my @keys = $q->param();
 
-	my @params    = param();
 	my( $name, $value );
 
 	foreach $name ( $q->param ) {
