@@ -49,6 +49,9 @@ print start_html(
 	    -code=>$newStyle}
 );
 
+print "<script src='form.js'    type='text/javascript'></script>\n";
+
+
 
 if ($request_type eq 'POST'){
 	# print 'THIS WAS A POST';
