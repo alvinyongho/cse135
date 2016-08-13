@@ -7,24 +7,22 @@
 	
 <?php
 	
-	ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+
 
 	$method = $_SERVER['REQUEST_METHOD'];
 	switch($method){
 		case 'GET':
 			echo '<p>Hello ';
-			echo $_SESSION['name']
+			// echo $_SESSION['name']
 			// echo ' from PHP on ' . date('Y-m-d h:i:s a') . '</p>';
 			// delete_session();
 			break;
 		case 'POST':
 			echo '<p>Hello ';
-			echo $_POST["name"];
+			// echo $_POST["name"];
 
 
-			$_SESSION['name']  =  $_GET['name'];
+			// $_SESSION['name']  =  $_GET['name'];
 			// delete_session();
 
 			// echo ' from PHP on ' . date('Y-m-d h:i:s a') . '</p>';
@@ -35,7 +33,6 @@ error_reporting(E_ALL);
 $background_color = '#CCDDEE';
 
 echo "<body style='background-color:$background_color'>";
-
 
 
 
