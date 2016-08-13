@@ -17,7 +17,7 @@ if ($request_type eq 'POST'){
 	print $request;
 
 	my $value = $q->param('name');
-	
+	print $value;
 
 } elsif ($request_type eq 'GET'){
 	print 'IT WAS A GET';
