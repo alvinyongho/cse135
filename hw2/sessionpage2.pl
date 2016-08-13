@@ -85,6 +85,7 @@ if ($request_type eq 'POST'){
 
 	if (defined $s->param('name')){
 		print "Hello " . $s->param('name');
+		print " nice to meet you!";
 		delete_form();
 	} else {
 		print "Howdy stranger...tell me your name on page1!";
