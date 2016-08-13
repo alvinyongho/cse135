@@ -27,7 +27,7 @@
 			break;
 		case 'POST':
 			echo '<p>Hello ';
-			// echo $_POST["name"];
+			echo $_POST["name"];
 
 
 			$_SESSION['name']  =  $_POST['name'];
