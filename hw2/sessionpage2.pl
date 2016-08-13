@@ -68,7 +68,7 @@ if ($request_type eq 'POST'){
 	print " nice to meet you!";
 
 
-	$q->Button(-text => 'Print',
+	$main->Button(-text => 'Print',
                    -command => sub{clear_session}
                    )->pack;
 
