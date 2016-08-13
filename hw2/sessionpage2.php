@@ -7,6 +7,7 @@
 	
 <?php
 	
+	session_start();
 
 
 	$method = $_SERVER['REQUEST_METHOD'];
