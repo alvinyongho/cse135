@@ -14,7 +14,7 @@
 		case 'GET':
 			echo 'GET';
 
-			echo '<p>Hello '
+			echo '<p>Hello ';
 			echo $_GET["name"];
 			echo ' from PHP on ' . date('Y-m-d h:i:s a') . '</p>';
 
