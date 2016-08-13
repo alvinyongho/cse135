@@ -10,6 +10,7 @@
 	// echo '<p>Hello World from PHP on ' . date('Y-m-d h:i:s a') . '</p>';
 
 	session_start();
+	echo session_id();
 
 	$background_color = '#CCDDEE';
 

@@ -8,7 +8,7 @@
 <?php
 	
 	session_start();
-
+	echo session_id();
 
 	$method = $_SERVER['REQUEST_METHOD'];
 	switch($method){
