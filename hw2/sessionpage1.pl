@@ -2,6 +2,9 @@
 
 use Data::Dumper;
 use CGI qw/:standard :html3/;
+use CGI::Carp qw(fatalsToBrowser); # show errors in browser
+use CGI::Session;
+
 my $q = CGI->new;
  
 print $q->header;
