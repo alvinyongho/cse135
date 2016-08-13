@@ -6,7 +6,31 @@ my $q = CGI->new;
  
 print $q->header;
 
-print $q->start_html(-title => 'Insert Form');
+
+
+
+$newStyle=<<END;
+<!-- 
+
+Body {
+    background-color: #CCDDEE
+}
+P.Tip {
+margin-right: 50pt;
+margin-left: 50pt;
+    color: red;
+}
+P.Alert {
+font-size: 30pt;
+    font-family: sans-serif;
+  color: red;
+}
+-->
+END
+
+print $q->start_html(-title=>'Insert Form CGI',
+    -style=>{-code=>$newStyle}
+);
 
 
 print "<script src='form.js'    type='text/javascript'></script>\n";

@@ -34,7 +34,7 @@ font-size: 30pt;
 END
 # print header();
 print start_html( 
-	-title=>'Hello CGI',
+	-title=>'Process Form CGI',
 	-style=>
 	{
 	    -code=>$newStyle}
@@ -64,7 +64,7 @@ if ($request_type eq 'POST'){
 	print " from a Web app written in CGI on \n";
 	$now_string = localtime();
 	print "$now_string";
-	
+
 }
 
 
