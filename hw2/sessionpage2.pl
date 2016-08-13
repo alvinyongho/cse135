@@ -96,7 +96,14 @@ if ($request_type eq 'POST'){
 	# $request = $ENV{'QUERY_STRING'};
 	# print $request;
 
-	print "Uhh what are you doing!?";
+
+	if (defined $s->param('name')){
+		print "Hello " . $s->param('name');
+	} else {
+		print "other message";
+	}
+
+	
 
 
 	# retrieve the session name
