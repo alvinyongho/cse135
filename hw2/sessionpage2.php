@@ -19,9 +19,11 @@
 
 			if (isset($_SESSION['name']))
 			{
-    			echo '<p>Hello ';
+    			echo '<p>Hi ';
 
     			echo $_SESSION['name'];
+    			echo " nice to meet you!";
+
     			delete_session();
 			} else {
 				echo "Howdy stranger...tell me your name on page1!";
@@ -30,8 +32,9 @@
 
 			break;
 		case 'POST':
-			echo '<p>Hello ';
+			echo '<p>Hi ';
 			echo $_POST["name"];
+			echo " nice to meet you!";
 
 			echo "adding name to session";
 			$_SESSION['name']  =  $_POST['name'];
