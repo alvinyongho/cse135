@@ -12,15 +12,15 @@
 	$method = $_SERVER['REQUEST_METHOD'];
 	switch($method){
 		case 'GET':
-			echo 'GET';
-
 			echo '<p>Hello ';
 			echo $_GET["name"];
 			echo ' from PHP on ' . date('Y-m-d h:i:s a') . '</p>';
 
 			break;
 		case 'POST':
-			echo 'POST';
+			echo '<p>Hello ';
+			echo $_POST["name"];
+			echo ' from PHP on ' . date('Y-m-d h:i:s a') . '</p>';
 			break;
 	}
 
