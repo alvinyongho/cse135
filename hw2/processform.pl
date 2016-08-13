@@ -18,7 +18,8 @@ if ($request_type eq 'POST'){
 
 	print "These are the parameters I received:\n\n";
 
-	
+
+	print $q->param('name');
 
 	my( $name, $value );
 
