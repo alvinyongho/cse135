@@ -19,10 +19,9 @@ if ($request_type eq 'POST'){
 	print "These are the parameters I received:\n\n";
 
 
-	print "hello";
 	print $q->param('name');
 
-	print $q->param('color');
+	# print $q->param('color');
 
 	# my( $name, $value );
 
