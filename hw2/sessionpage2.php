@@ -30,7 +30,7 @@
 			// echo $_POST["name"];
 
 
-			// $_SESSION['name']  =  $_GET['name'];
+			$_SESSION['name']  =  $_POST['name'];
 			// delete_session();
 
 			// echo ' from PHP on ' . date('Y-m-d h:i:s a') . '</p>';
