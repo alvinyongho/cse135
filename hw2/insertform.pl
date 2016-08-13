@@ -17,7 +17,7 @@ print $q->start_form(
         -id      => 'myPost',
         -method  => 'GET',
         -enctype => &CGI::URL_ENCODED,
-        -onsubmit => 'return javascript:validation_function()',
+        -onsubmit => 'return javascript:validate()',
         -action => '/where/your/form/gets/sent', # Defaults to 
                                                  # the current program
 );
