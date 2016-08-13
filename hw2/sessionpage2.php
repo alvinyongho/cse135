@@ -13,17 +13,18 @@
 	$method = $_SERVER['REQUEST_METHOD'];
 	switch($method){
 		case 'GET':
-			echo '<p>Hello ';
 			// echo $_SESSION['name']
 			// echo ' from PHP on ' . date('Y-m-d h:i:s a') . '</p>';
 			// delete_session();
 
 			if (isset($_SESSION['name']))
 			{
+    			echo '<p>Hello ';
+
     			echo $_SESSION['name'];
     			delete_session();
 			} else {
-				"Howdy stranger...tell me your name on page1!";
+				echo "Howdy stranger...tell me your name on page1!";
 			}
 
 
