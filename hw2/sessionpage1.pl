@@ -3,6 +3,7 @@
 use Data::Dumper;
 use CGI qw/:standard :html3/;
 my $q = CGI->new;
+my $session = CGI::Session->new();
  
 print $q->header;
 
