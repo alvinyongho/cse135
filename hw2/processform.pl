@@ -20,7 +20,7 @@ if ($request_type eq 'POST'){
 
 	my @keys = $q->param();
 
-	print $keys['name'];
+	print $keys('name');
 
 }
 
