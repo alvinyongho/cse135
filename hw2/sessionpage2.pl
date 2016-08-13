@@ -68,7 +68,7 @@ if ($request_type eq 'POST'){
 	print " nice to meet you!";
 
 
-	print "<button id='clear_session' onclick='deleteSession'>Clear Session</button>";
+	print "<button id='clear_session' name='delete' onclick='deleteSession'>Clear Session</button>";
 
 
 } elsif ($request_type eq 'GET'){
@@ -81,10 +81,10 @@ if ($request_type eq 'POST'){
 }
 
 
-
-
-sub deleteSession {
-	$s->delete;
+if(defined $q->param('delete')){
+    # delete session
+    $s->delete;
+    print "Session will be deleted.\n";
 }
 
 
