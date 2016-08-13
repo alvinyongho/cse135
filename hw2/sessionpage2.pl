@@ -10,6 +10,7 @@ use CGI::Session;
 
 my $q = CGI->new;
  
+my $s = CGI::Session->new($q);
 
 
 print $q->header;
@@ -57,6 +58,12 @@ if ($request_type eq 'POST'){
 	# print "These are the parameters I received:\n\n";
 
 
+	printf "Your session ID is: %s\n", $s->id;
+	printf "This sessin is: %s\n", $s->is_new ? 'NEW': 'old';
+	printf "Stored session 'test' value: '%s'\n", $q->escapeHTML($s->param('test'));
+	printf "CGI Params: %s\n", join ', ', $q->param;
+
+
 	print "Hello " . $q->param('name');
 	print " nice to meet you!";
 
@@ -74,6 +81,9 @@ if ($request_type eq 'POST'){
 }
 
 
+sub deleteSession {
+	$s->delete;
+}
 
 
 
