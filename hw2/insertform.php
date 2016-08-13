@@ -25,6 +25,11 @@ echo "<body style='background-color:$background_color'>";
 	<br/>
 	Favorite Color: <input type="text" name="color" value="<?php echo $color;?>">
 
+	<select name="ins_method">
+		<option value="POST">Post</option>
+		<option value="GET">GET</option>
+	</select>
+
 
 </form>
 
