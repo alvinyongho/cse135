@@ -7,6 +7,11 @@ my $q = CGI->new;
 print $q->header;
 
 print $q->start_html(-title => 'A web form');
+
+
+print "<script src='form.js'    type='text/javascript'></script>\n";
+
+
 print $q->start_form(
         -name    => 'main_form',
         -method  => 'GET',
