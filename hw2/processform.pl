@@ -4,13 +4,12 @@ use Data::Dumper;
 use CGI;
 my $q = CGI->new;
  
-my %data;
-$data{fullname} = $q->param('fullname');
-$data{country} = $q->param('country');
-$data{question} = $q->param('question');
- 
-print $q->header;
-if ($data{fullname} !~ /^[\s\w.-]+$/) {
-	print "Name must contain only alphanumerics, spaces, dots and dashes.";
-	exit;
+$request_method = $ENV{'REQUEST_METHOD'};
+if ($request_method eq "GET") {
+    $query_string = $ENV{'QUERY_STRING'};
+} elsif ($request_method eq "POST") {
+    read (STDIN, $query_string, $ENV{'CONTENT_LENGTH'});
+} else {
+    &return_error (500, "Server Error",
+                        "Server uses unsupported method");
 }
