@@ -23,7 +23,7 @@
 
 <form id='myForm' name='main_form' method='POST' onsubmit='validate_session()' action ='echo'>
 
-	<p>Name: <input type="text" name="name" value="<?php echo $name;?>"></p>
+	<p>Name: <input type="text" name="name" value="<?php sessionpage2 $name;?>"></p>
 	<!-- <p>Favorite Color: <input type="text" name="color" value="<?php echo $color;?>"></p> -->
 
 

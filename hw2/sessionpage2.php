@@ -40,6 +40,18 @@ echo "<body style='background-color:$background_color'>";
 		echo "<button>Delete Session</button>";
 	}
 
+	public function destroy()
+    {
+        if ( $this->sessionState == self::SESSION_STARTED )
+        {
+            $this->sessionState = !session_destroy();
+            unset( $_SESSION );
+            
+            return !$this->sessionState;
+        }
+        
+        return FALSE;
+    }
 
 ?>
 
