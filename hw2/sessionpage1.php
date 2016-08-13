@@ -21,17 +21,17 @@
 
 
 
-<form id='myForm' name='main_form' method='POST' onsubmit='validate()' action ='echo'>
+<form id='myForm' name='main_form' method='POST' onsubmit='validate_session()' action ='echo'>
 
 	<p>Name: <input type="text" name="name" value="<?php echo $name;?>"></p>
 	<!-- <p>Favorite Color: <input type="text" name="color" value="<?php echo $color;?>"></p> -->
 
 
-	<select name="ins_method">
+<!-- 	<select name="ins_method">
 		<option value="POST">POST</option>
 		<option value="GET">GET</option>
 	</select>
-
+ -->
 	<input type="submit" value="Submit">
 
 </form>
