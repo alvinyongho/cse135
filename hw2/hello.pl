@@ -5,8 +5,12 @@ use CGI qw/:standard :html3/;
 # $now_string = localtime();
 # print "$now_string";
 
-my @set = ('0' ..'9', 'A' .. 'F');
-my $random_color = join '' => map $set[rand @set], 1 .. 6;
+# my @set = ('0' ..'9', 'A' .. 'F');
+# my $random_color = join '' => map $set[rand @set], 1 .. 6;
+
+
+my @colors = ("red","white","blue");
+my $random_color = $colors[rand @colors];
 
 # # # print $random_color;
 
