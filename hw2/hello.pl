@@ -22,7 +22,7 @@ $newStyle=<<END;
 <!-- 
 
 Body {
-	background-color: #$random_color
+	background-color: $random_color
 }
 P.Tip {
 margin-right: 50pt;
